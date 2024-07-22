@@ -34,6 +34,7 @@ body {
 
   /*background: colocar image repeat position/size */
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -288,5 +289,14 @@ h2 {
     top: 0;
     left: -20px;
     width: 50%;
+  }
+}
+
+@media (min-width: 700px){
+  :root{
+    --bg-url: url(./assets/duo/bg-desktop.jpg)
+  }
+  .light{
+    --bg-url: url(./assets/duo/bg-desktop-light.jpg)
   }
 }
