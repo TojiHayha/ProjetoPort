@@ -95,7 +95,14 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-out 0.4s;
 }
+
+#switch button:hover{
+  outline: 8px solid var(--highlight-color);
+}
+
 
 .sobre-page #switch {
   position: absolute;
@@ -104,8 +111,7 @@ body * {
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+ animation: slide-in 0.4s forwards;
 }
 
 #switch span {
@@ -280,6 +286,7 @@ h2 {
   color: var(--text-color);
 }
 
+/* media queries*/
 @media (max-width: 714px) {
   ul li {
     width: 100%;
@@ -298,5 +305,25 @@ h2 {
   }
   .light{
     --bg-url: url(./assets/duo/bg-desktop-light.jpg)
+  }
+}
+
+/* animations */
+
+@keyframes slide-in{
+  from{
+    left: 0;
+  }
+  to{
+    left: 50%;
+  }
+}
+
+@keyframes slide-out{
+  from{
+    left: 50%;
+  }
+  to{
+    left: 0;
   }
 }
